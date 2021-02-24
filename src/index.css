@@ -1,13 +1,282 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  font-size: 62.5%;
+
+  --primaryColor: #ff5c00;
+  --vasitiBlack: #25201d;
+  --light-grey: #f8f8f8;
+  --darkGreen: #049a01;
+  --lightGreen: #f0ffee;
+  --darkGrey: #494949;
+  --main-white: #fff;
+  --mainBlack: #222;
+  --darkBlue: #0d019a;
+  --lightBlue: #eef8ff;
+
+  --mainTransition: all 0.5s linear;
+  --largeFont: 8rem;
+  --mediumFont: 6rem;
+  --smallFont: 3.5rem;
+  --mainSpacing: 0.2rem;
+  --lineHeight: 1.3;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShodow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* globals */
+body {
+  padding: 60px 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light-grey);
+  overflow-x: hidden;
+  color: var(--mainBlack);
+  font-size: 1.6rem;
+}
+
+/* end of globals */
+
+/***** Navbar *****/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--main-white);
+  z-index: 2;
+  border-bottom: solid 3px #00000029;
+  /* box-shadow: 0 0 1.2rem 0 rgba(29, 28, 28, 0.849); */
+}
+
+.navbar-center {
+  max-width: 117rem;
+  margin: 0 auto;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: var(--smallFont);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--primaryColor);
+  letter-spacing: var(--mainSpacing);
+}
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-btn {
+  background: none;
+  border: none;
+  outline: none;
+  padding: none;
+}
+.navbar-btn-icon {
+  font-size: 2rem;
+  color: var(--mainBlack);
+}
+.navbar-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style: none;
+}
+.navbar-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  text-align: left;
+}
+.mobile-nav-header {
+  background-color: var(--primaryColor);
+}
+.mobile-nav-header h4 {
+  font-size: var(--smallFont);
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--main-white);
+}
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(94, 93, 93, 0.726);
+  z-index: 3;
+  transition: all 0.1s linear;
+  visibility: hidden;
+}
+.transparent-bcg {
+  transition-delay: 0.2s;
+  visibility: visible;
+}
+.mobile-nav {
+  position: fixed;
+  background: var(--main-white);
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  color: var(--mainBlack);
+  box-shadow: 0 0 1.2rem 0 rgba(29, 28, 28, 0.849);
+  transition: all 0.5s linear;
+  transform: translateX(-200%);
+}
+.mobile-nav-item {
+  padding: 1rem 0;
+}
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 2rem 6rem;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+.mobile-nav-links a {
+  text-decoration: none;
+  color: var(--mainBlack);
+  font-weight: bold;
+}
+.show-nav {
+  transition: all 0.5s linear;
+  transform: translateY(0);
+}
+.navbar-icons {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+.navbar-icons a {
+  text-decoration: none;
+  margin: 0 0 0 2rem;
+  color: var(--mainBlack);
+}
+
+.navbar-items-icon {
+  font-size: 1.8rem;
+}
+.navbar-single-link {
+  background: none;
+  padding: 0.5rem 0rem;
+  font-size: 1.6rem;
+  font-weight: 540;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--mainBlack);
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+  transition: var(--mainTransition);
+  margin: 0 0 0 2rem;
+}
+.navbar-single-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 2.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: var(--mainTransition);
+  background-color: var(--mainOrange);
+}
+
+.navbar-single-link,
+.active:after,
+.navbar-single-link:hover:after {
+  transform-origin: right;
+  transform: scale(1);
+}
+@media screen and (min-width: 768px) {
+  .mobile-nav-header h4 {
+    font-size: var(--mediumFont);
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--main-white);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: var(--main-white);
+    z-index: 2;
+    /* box-shadow: 0 0 1.2rem 0 rgba(29, 28, 28, 0.849); */
+  }
+  .navbar-btn {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .navbar-center {
+    max-width: 117rem;
+    margin: 0 auto;
+  }
+  .navbar-links {
+    height: auto;
+    display: flex;
+  }
+  .navbar-links a {
+    margin: 0 2rem;
+    padding: 0.5rem 0;
+    font-weight: bold;
+    color: var(--mainBlack);
+  }
+  .navbar-icons {
+    display: flex;
+    list-style-type: none;
+  }
+  .navbar-single-link {
+    background: none;
+    padding: 1rem 0rem;
+    font-size: 1.6rem;
+    font-weight: 540;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: var(--mainBlack);
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    transition: var(--mainTransition);
+    margin: 0 0 0 2rem;
+  }
+  .navbar-icons a {
+    text-decoration: none;
+    margin: 0 0 0 2rem;
+    color: var(--mainBlack);
+  }
+  .logo {
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primaryColor);
+    letter-spacing: var(--mainSpacing);
+    padding: 0 0 0 0rem;
+  }
+}
+
+/***** End of Navbar *****/
