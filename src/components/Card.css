@@ -11,10 +11,34 @@
 .card-img {
   width: 100%;
 }
+.cola-mark img {
+  width: 40px;
+}
 .card {
   position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: var(--main-shadow);
+}
+
+.location-1 {
+  position: absolute;
+  bottom: 160px;
+  right: 80px;
+}
+.location-2 {
+  position: absolute;
+  bottom: 70px;
+  right: 160px;
+}
+.location-3 {
+  position: absolute;
+  bottom: -10px;
+  right: 80px;
+}
+.location-4 {
+  position: absolute;
+  bottom: -70px;
+  right: 160px;
 }
