@@ -1,8 +1,8 @@
 .mobile-nav-header {
-  background-color: var(--primaryColor);
+  background-color: var(--primary-color);
 }
 .mobile-nav-header h4 {
-  font-size: var(--smallFont);
+  font-size: var(--small-font);
   text-align: center;
   padding: 4rem 0;
   color: var(--main-white);
@@ -30,7 +30,7 @@
   top: 0;
   left: 0;
   z-index: 3;
-  color: var(--mainBlack);
+  color: var(--main-black);
   box-shadow: 0 0 1.2rem 0 rgba(29, 28, 28, 0.849);
   transition: all 0.5s linear;
   transform: translateX(-200%);
@@ -47,7 +47,7 @@
 }
 .mobile-nav-links a {
   text-decoration: none;
-  color: var(--mainBlack);
+  color: var(--main-black);
   font-weight: bold;
 }
 .show-nav {

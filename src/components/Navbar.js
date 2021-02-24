@@ -11,7 +11,7 @@ const Navbar = (props) => {
         <div className="navbar-center">
           <div className="nav-container">
             <div className="navbar-btn" onClick={props.openMenu}>
-              <img src={menuImg} alt="menu-icon" /> <span>Profile</span>
+              <img src={menuImg} alt="menu-icon" /> <span><h4>Profile</h4></span>
             </div>
 
             <ul className="navbar-links">

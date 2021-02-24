@@ -1,22 +1,49 @@
 .colapage {
-  padding: 2rem 0rem !important;
+  padding: 2rem 3rem 5rem 3rem !important;
 }
-.cola-header{
-  margin: 0 0 3rem 0;
+.cola-header {
+  margin: 0 0 6rem 0;
 }
 .colapage-container {
   max-width: 117rem;
-  padding: 0 3rem;
-  /* margin: 0 auto; */
+  margin: 0 auto;
+}
+.follow-div {
+  margin: 0 0 0 2rem;
+}
+.follow-txt {
+  color: blue;
+  padding: 0.3rem 1rem;
+  border: solid 3px blue;
+  border-radius: 50px;
+}
+.cola-icon-div {
+  width: 12%;
+}
+.cola-icon-div img {
+  width: 100%;
 }
 .cocacola-ng {
   display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+.cocacola-ng h1 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: bolder;
 }
 .cocacola-ng span {
   margin: 0 0 0 2rem;
 }
+.scape {
+  padding: 0.3rem 1rem;
+  border: solid 2.5px #00000029;
+  border-radius: 5px;
+}
 .scape-post {
   display: flex;
+  align-items: center;
 }
 .scape-post span {
   margin: 0 0 0 2rem;

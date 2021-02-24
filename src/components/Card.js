@@ -7,8 +7,8 @@ const Card = () => {
     <div className="card">
       <img src={map} alt="card" className="card-img" />
       <div className="card-footer">
-        <h5>trucks on field</h5>
-        <p>7 thing posts</p>
+        <h3>Cocacola Depots</h3>
+        <p>26 location posts</p>
       </div>
     </div>
   );
