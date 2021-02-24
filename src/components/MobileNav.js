@@ -1,4 +1,5 @@
 import React from "react";
+import "./MobileNav.css";
 
 const MobileNav = (props) => {
   console.log(props);

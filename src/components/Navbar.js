@@ -1,4 +1,5 @@
 import React from "react";
+import "./Navbar.css";
 import menuImg from "../assets/menu-icon.svg";
 import addBtn from "../assets/add-btn.svg";
 

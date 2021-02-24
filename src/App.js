@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
-
 import Navbar from "./components/Navbar";
 import MobileNav from "./components/MobileNav";
-import Carousel from './components/Carousel';
+import ColaPage from './components/ColaPage';
 
 
 const App = () => {
@@ -28,7 +27,7 @@ const App = () => {
       <>
         <Navbar openMenu={openHandler} />
         <MobileNav closeMenu={closeHandler} openState={menuState.isOpen} />
-        <Carousel />
+        <ColaPage />
       </>
     </div>
   );

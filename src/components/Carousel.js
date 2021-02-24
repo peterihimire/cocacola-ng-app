@@ -1,23 +1,29 @@
 import React, { useState } from "react";
+import "./Carousel.css";
 import ItemsCarousel from "react-items-carousel";
-import colaSpot from "../assets/cola-spot.png";
+import Card from "../components/Card";
 
 const Carousel = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 5;
+  // const chevronWidth = 5;
   return (
-    <div style={{ padding: `0 ${chevronWidth}px` }}>
+    // <div style={{ padding: `0 ${chevronWidth}px` }}>
+    <div className="carousel">
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
-        numberOfCards={1.5}
-        gutter={20}
+        numberOfCards={1.3}
+        gutter={30}
+        freeScrolling={true}
+        // activePosition={"center"}
+        // showSlither={true}
+        // firstAndLastGutter={true}
         // leftChevron={<button>{"<"}</button>}
         // rightChevron={<button>{">"}</button>}
         outsideChevron
-        chevronWidth={chevronWidth}
+        // chevronWidth={chevronWidth}
       >
-        <div>
+        {/* <div>
           <img src={colaSpot} alt="cola spot" />
         </div>
         <div>
@@ -31,9 +37,63 @@ const Carousel = () => {
         </div>
         <div>
           <img src={colaSpot} alt="cola spot" />
-        </div>
+        </div> */}
 
-        {/* <div style={{ height: 500, background: "#EEE" }}>Seventh card</div> */}
+        {/* <div>
+          <div className="one-slide">
+            <img src={colaSpot} alt="cola spot" />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <img src={colaSpot} alt="cola spot" />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <img src={colaSpot} alt="cola spot" />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <img src={colaSpot} alt="cola spot" />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <img src={colaSpot} alt="cola spot" />
+          </div>
+        </div> */}
+        {/* <div style={{ height: 500, background: "#EEE" }}>
+          <div className="one-slide">
+            <img src={colaSpot} alt="cola spot" />
+          </div>
+        </div> */}
+        <div>
+          <div className="one-slide">
+            <Card />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <Card />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <Card />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <Card />
+          </div>
+        </div>
+        <div>
+          <div className="one-slide">
+            <Card />
+          </div>
+        </div>
       </ItemsCarousel>
     </div>
   );

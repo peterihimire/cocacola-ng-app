@@ -1,0 +1,23 @@
+.colapage {
+  padding: 2rem 0rem !important;
+}
+.cola-header{
+  margin: 0 0 3rem 0;
+}
+.colapage-container {
+  max-width: 117rem;
+  padding: 0 3rem;
+  /* margin: 0 auto; */
+}
+.cocacola-ng {
+  display: flex;
+}
+.cocacola-ng span {
+  margin: 0 0 0 2rem;
+}
+.scape-post {
+  display: flex;
+}
+.scape-post span {
+  margin: 0 0 0 2rem;
+}

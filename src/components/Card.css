@@ -1,0 +1,17 @@
+.card-footer {
+  position: absolute;
+  background-color: var(--main-white);
+  padding: 3rem;
+  bottom: 0px;
+  width: 100%;
+}
+.card-img {
+  width: 100%;
+}
+.card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  /* box-shadow: var(--main-shadow); */
+}
